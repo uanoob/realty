@@ -30,6 +30,7 @@
   "scripts": {
     "start": "nodemon src/index.ts",
     "build": "tsc -p ./",
-    "lint": "eslint . --ext .js --ext .jsx --ext .ts --cache"
+    "lint": "eslint . --ext .js --ext .jsx --ext .ts --cache",
+    "seed": "ts-node temp/seed.ts"
   }
 }
