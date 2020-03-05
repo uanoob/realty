@@ -17,8 +17,8 @@ const clearPlugin = new CleanWebpackPlugin();
 module.exports = {
   entry: {
     app: ['./src/index.tsx'],
-    vendor: ['react', 'react-dom']
-},
+    vendor: ['react', 'react-dom'],
+  },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
@@ -30,6 +30,13 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        secure: false,
+        changeOrigin: true,
+      },
+    },
   },
   devtool: 'source-map',
   module: {

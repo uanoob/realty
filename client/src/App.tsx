@@ -1,5 +1,6 @@
-import  React from 'react';
+import React from 'react';
+import { Listings } from './sections';
 
-const App = () => <div>Hi there!</div>;
+const App = () => <Listings title='House Listings' />;
 
 export default App;
